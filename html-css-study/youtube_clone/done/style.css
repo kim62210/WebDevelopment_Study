@@ -1,0 +1,225 @@
+:root {
+    /* Color */
+    --white-color:#fff;
+    --black-color:#140a00;
+    --blue-color:#045fd4;
+    --red-color:#ff0000;
+    --grey-dark-color:#909090;
+    --grey-light-color:#e0e0e0;
+    /* Size */
+    --padding: 12px;
+    --avatar-size: 36px;
+    /* Font Size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body {
+    font-family:Roboto;
+}
+
+ul {
+    /* 항목 점 표기 삭제 */
+    list-style:none;
+}
+
+button,button:focus{
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Header */
+Header {
+    display: flex;
+    justify-content:space-between;
+    padding:var(--padding);
+    background-color: var(--black-color);
+    color:var(--white-color);
+}
+header .logo{
+    font-size: var(--font-large);
+}
+
+header .logo i {
+    color: var(--red-color);
+}
+
+header .icons .fa-search {
+    margin-right: var(--padding);
+}
+
+/* Video Player */
+.player {
+    /* 위치를 고정시키기 
+     position : sticky;
+     어느 부분에 고정할 것인지
+    top : 0; */
+    text-align: center;
+    background-color: var(--black-color);
+}
+.player video {
+    /* 동영상 크기를 창 크기에 맞춤 */
+    width:100%;
+    /* 증가 경계선 */
+    max-width: 500px; 
+}
+
+/* Video Info */
+body > .info {
+    padding: var(--padding);
+}
+.info .metadata .hashtags {
+    display: flex;
+    font-size: var(--font-small);
+    color:var(--blue-color);
+}
+.info .metadata .hashtags li {
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton {
+    display: flex;
+    justify-content: space-between;
+    padding : 0 var(--padding);
+}
+
+.info .metadata .titleAndButton .title{
+    font-size: var(--font-medium);
+    /* 화면이 줄어도 콘텐츠를 2줄로 제한*/
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-right:var(--padding);
+}
+.info .metadata .titleAndButton .moreBtn {
+    height: 100%;
+}
+.info .views {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+.info .actions{
+    display:flex;
+    justify-content: space-around;
+    margin: var(--padding) 0;
+}
+.info .actions button {
+    display: flex;
+    flex-direction : column;
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+    background-color:var(--white-color);
+}
+
+.info .actions button i {
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding)/2);
+    font-size: 16px;
+}
+
+.info .actions button i.active {
+    color: var(--blue-color);
+}
+
+.channel {
+    display: flex;
+    justify-content: space-between;
+    border-top : 1px solid var(--grey-light-color);
+    border-bottom : 1px solid var(--grey-light-color);
+}
+
+.channel .metadata {
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+}
+.channel .metadata .info{
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--padding);
+}
+.channel .metadata img {
+    width : var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+}
+
+.channel .metadata .info .name {
+    font-size:var(--font-medium);
+}
+.channel .metadata .info .subscribers{
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+.channel .subscribe{
+    text-transform: uppercase;
+    background: var(--red-color);
+    color: var(--white-color);
+    font-size:var(--font-medium);
+    border-radius:5%;
+    margin: 5px;
+    padding: 0 var(--padding);
+    border: 0.5px solid var(--grey-dark-color);
+}
+
+.upNext {
+    padding: 0 var(--padding);
+}
+
+.upNext > .title{
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+    margin-bottom: calc(var(--padding)/2);
+}
+.upNext ul .item{
+    display: flex;
+    margin-top:var(--padding);
+}
+.upNext ul .item img{
+    flex: 1 1 35%;
+    margin-right: var(--padding);
+}
+.upNext ul .item .img img{
+    width : 120px;
+    height: 90px;
+}
+
+.upNext ul .item .info{
+    flex: 1 1 60%;
+}
+.upNext ul .item .moreBtn{
+    flex: 1 1 5%;
+    background-color:var(--white-color);
+}
+.upNext ul .item .info{
+    display: flex;
+    flex-direction: column;
+}
+.upNext ul .item .info .title {
+    font-size:var(--font-small);
+}
+.upNext ul .item .info .name,
+.upNext ul .item .info .views {
+    font-size: var(--font-micro);
+    color: var(--grey-dark-color);
+}
+.infoAndUpnext {
+    display: flex;
+    flex-direction:column;
+}
+
+@media screen and (min-width: 768px){
+    .infoAndUpnext{
+        flex-direction: row;
+        justify-content: center;
+        margin: var(--padding) 0;
+    }
+}
