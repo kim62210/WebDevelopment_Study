@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <title>twittler</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css?ver=1" />
+  <script src="https://kit.fontawesome.com/41cc6f74b2.js" crossorigin="anonymous"></script>
+  <script src="data.js"></script>
+</head>
+
+<body>
+  <!-- 여기에 HTML 구조를 작성하세요. 아래 코드는 예제이며, 얼마든지 바꿀 수 있습니다 -->
+  <section class="whole-page">
+    <!-- *** Navigation Menu *** -->
+    <header class="menu-bar">
+      <div class="side-padding">
+      </div>
+      <div class="menu-bar-container">
+        <ul class="menu-icons">
+          <li class="item">
+            <div class="button">
+              <i class="fab fa-twitter" id="home-icon"></i>
+            </div>
+          </li>
+          <li class="item">
+            <div class="button">
+              <i class="fas fa-house-user"></i>
+              <span class="buttonSpan">홈</span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="button">
+              <i class="fas fa-hashtag"></i>
+              <span class="buttonSpan">탐색하기</span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="button">
+              <i class="far fa-bell"></i>
+              <span class="buttonSpan">알림</span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="button">
+              <i class="far fa-envelope"></i>
+              <span class="buttonSpan">쪽지</span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="button">
+              <i class="far fa-bookmark"></i>
+              <span class="buttonSpan">북마크</span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="button">
+              <i class="far fa-file-alt"></i>
+              <span class="buttonSpan">리스트</span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="button">
+              <div><i class="far fa-user"></i></div>
+              <span class="buttonSpan">프로필</span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="button">
+              <i class="far fa-comment-dots"></i>
+              <span class="buttonSpan">더 보기</span>
+            </div>
+          </li>
+          <li class="item">
+            <div>
+              <button id="nav-tweetBtn"><span><b>트윗</b></span></button>
+            </div>
+          </li>
+        </ul>
+        <div class="user-profile">
+          <img class="user-default-img" src="image/profile_default.jpg" alt="">
+          <div class="user-metadata">
+            <!-- span과 div의 차이-->
+            <div class="user-id">김형주</div>
+            <div class="user-code">@xU97z8UqpiaaGiK</div>
+          </div>
+          <div>
+            <button class="moreBtn">
+              <i class="fas fa-ellipsis-h"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- *** Main Content *** -->
+    <section class="contents">
+
+      <div class="homeBar">
+        <button class="homeBtn">
+          <span>홈</span>
+        </button>
+        <button class="starBtn">
+          <i class="far fa-star"></i>
+        </button>
+      </div>
+
+      <div class="user-comment">
+        <div class="comment-part">
+          <div class="profile-box">
+            <button class="profile-info">
+              <img src="image/profile_default.jpg" alt="">
+            </button>
+          </div>
+          <div class="writing-part">
+            <div class="inputbox">
+              <!-- 나중에 textarea로 수정해야함 -->
+              <input type="text" placeholder="무슨 일이 일어나고 있나요?">
+            </div>
+            <div class="option-buttons">
+              <div class="buttons">
+                <ul class="button-list">
+                  <li><button><i class="far fa-file-image"></i></button></li>
+                  <li><button><i class="far fa-file-video"></i></button></li>
+                  <li><button><i class="fas fa-chart-bar"></i></button></li>
+                  <li><button><i class="far fa-smile"></i></button></li>
+                  <li><button><i class="far fa-calendar"></i></button></li>
+                </ul>
+                <button id="comment-tweetBtn">
+                  <span><b>트윗</b></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="margin-little">
+         
+      </div>
+      <!-- comment items list-->
+      <div class="othersComment">
+        <ul class="comment-lists">
+          <li class="comment-item">
+            <div class="content">
+              
+              <div class="profile_img">
+                <img src="image/profile_default.jpg" alt="" class="profile-img" width="30" height="30">
+              </div>
+
+              <div class="content-part">
+                <div class="user-metadata-moreBtn">
+                  <div class="user-metadata">
+                    <button class="nickname-link">
+                      <span class="user-nickname">힙합플레이야</span>
+                    </button>
+                    <span class="user-idtag">@hipplesince2001</span>
+                    <span class="dot">·</span>
+                    <span class="createdAt">2h</span>
+                  </div>
+                  <button class="moreBtn">
+                    <i class="fas fa-ellipsis-h"></i>
+                  </button>
+                </div>
+                <!--    article    -->
+                <article class="content-article">
+                  <div class="text-content">
+                    <p>Slowthaiのインタビューさせていただきました！面白かったし次はもっとじっくりインタビューしたいですな。
+                      ちなみに次に公開されるインタビューもイギリスのアーティストです！</p>
+                  </div>
+                  <div class="media-content">
+                    <img src="image" alt="">
+                  </div>
+                </article>
+                <ul class="user_actions">
+                  <li>
+                    <button>
+                      <i class="far fa-comment"></i><span>33</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <i class="fas fa-sync-alt"></i><span>4.2K</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <i class="far fa-heart"></i><span>661</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <i class="fas fa-external-link-alt"></i><span></span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- Searching Bar -->
+    <section class="search-bar">
+      <input type="text" class="tweet-search" placeholder="트위터 검색">
+      <div class="trendforyou">
+        <div class="top-menu">
+          <span class="theme">나를 위한 트렌드</span>
+          <button>
+            <i class="fas fa-cog"></i>
+          </button>
+        </div>
+        <ul>
+          <li>
+            <div>
+              <span>K-pop · Trending</span>
+              <button><i></i></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
